@@ -1,0 +1,40 @@
+/** primary
+  * 1. rgb(238, 116, 8)
+  * 2. rgb(249, 150, 60)
+  * 3. rgb(222, 109, 7)
+*/
+
+a,
+.color-primary-font {
+    color: rgb(238, 116, 8);
+}
+
+a:hover,
+.color-primary-font-hover {
+    color: rgb(249, 150, 60);
+}
+
+a:active,
+a:focus,
+.color-primary-font-active {
+    color: rgb(249, 150, 60);
+}
+
+.color-primary-background {
+    background-color: rgb(249, 150, 60);
+}
+
+.color-primary-button {
+    background-color: rgb(238, 116, 8);
+}
+
+.color-primary-button:hover, .color-primary-button-hover {
+    background-color: rgb(249, 150, 60);
+}
+
+.color-primary-button:active,
+.color-primary-button:focus,
+.color-primary-button-active {
+    background-color: rgb(222, 109, 7);
+}
+

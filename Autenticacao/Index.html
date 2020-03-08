@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link href="../Content/Gridmvc.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-toggle.css" rel="stylesheet" />
+    <link href="../Content/css/select2.css" rel="stylesheet" />
+    <link href="../Content/css/Site.css" rel="stylesheet" />
+
+    <script src="../Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/autoNumeric/autoNumeric-1.9.25.js"></script>
+    <script src="../Scripts/jquery.mask.js"></script>
+
+    <script src="../Scripts/jquery.validate.js"></script>
+    <script src="../Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="../Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="../Scripts/jquery.validate.custom.pt-br.js"></script>
+    <script src="../Scripts/methods_pt.js"></script>
+    <script src="../Scripts/jquery.inputmask.bundle.min.js"></script>
+
+    <script src="../Scripts/bootstrap-multiselect.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/bootstrap-dialog.js"></script>
+    <script src="../Scripts/respond.min.js"></script>
+    <script src="../Scripts/bootstrap-toggle.js"></script>
+    <script src="../Scripts/select2.js"></script>
+    <script src="../Scripts/jquery.floatThead.js"></script>
+
+    <script src="../Scripts/jquery-ui-1.12.1.js"></script>
+
+    <link href="../Content/themes/bootstrap/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+
+
+    <script src="../Scripts/bootstrap-filestyle.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.js"></script>
+    <script src="../Scripts/bootstrap-timepicker.js"></script>
+    <script src="../Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+    <!-- MFM Dependencias adicionais -->
+    <link href="../Content/css/facelift/facelift.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Be Vietnam' rel='stylesheet'>
+</head>
+
+<body onload="AjustesTela()" class="color-primary-background">
+    <!-- MFM
+    <div class="navbar navbar-fixed-top bs-navbar-cfg">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle bs-btn-nav-cfg" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img src="../Content/Images/LogoEmpresaMini.png"
+                        style="height:53px;margin-top:-14px;" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="width:70%">
+                    <li class="dropdown nav navbar-nav navbar-right">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ajuda<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank"
+                                    href="../Content/Documentos/Gest%c3%a3o de Serviços - Manual do Usuario Externo.pdf">Manual
+                                    do Usuário</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="container" style="height:100%">
+        <div id="hoverMenu" class="hoverINTMenu text-center" style="vertical-align:middle; padding-top: 150px;">
+            <i class="glyphicon glyphicon-refresh gly-spin-obtendo" style="top:20px"></i>
+        </div>
+        <div class="bodyMenu">
+            <form action="../Autenticacao/Index?ReturnUrl=%2fgestaoservicos" method="post"> <br />
+                <div class="col-lg-12 noPadding">
+                    <div class="col-lg-3 noPadding">
+                    </div>
+                    <div class="col-lg-6 noPadding">
+                        <div class="panel panel-login">
+                            <div class="panel-heading panel-heading-logo"></div>
+                            <div class="panel-body">
+                                <div class="col-lg-12 noPadding marginBottomRow">
+                                    <input id="IdentificacaoHF" name="IdentificacaoHF" type="hidden" value="" />
+                                    <label for="Identificacao" id="addonIdentificacao">Usuário</label>
+                                    <input autocomplete="off" class="form-control" data-val="true"
+                                        data-val-email="A identificação deve ser um e-mail inválido!"
+                                        data-val-maxlength="A identificação deve ter no máximo 255 caracteres!"
+                                        data-val-maxlength-max="255" data-val-required="Preencha a identificação"
+                                        id="Identificacao" name="Identificacao" onchange="onChangeIdentificacao(this)"
+                                        tabindex="1" type="email" value="" />
+                                    <div>
+                                        <span class="field-validation-valid text-danger-small"
+                                            data-valmsg-for="Identificacao" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 noPadding">
+                                    <label for="Senha" id="addonSenha">Senha</label>
+                                    <input autocomplete="off" class="form-control" data-val="true"
+                                        data-val-maxlength="A senha deve ter no máximo 10 caracteres!"
+                                        data-val-maxlength-max="10" data-val-required="Preencha a senha" id="Senha"
+                                        name="Senha" tabindex="1" type="password" value="" />
+                                    <div class="col-lg-12 noPadding">
+                                        <div>
+                                            <span class="field-validation-valid text-danger-small"
+                                                data-valmsg-for="Senha" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 noPadding marginBottomRow">
+                                    <span class="field-validation-valid text-danger-small" data-valmsg-for="CustonError"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="col-sm-12 noPadding marginBottomRow buttons">
+                                    <button id="btnAutenticar" type="submit" value="onAutenticando" name="actionName"
+                                        class="btn btn-sm btn-primary color-primary-button remove-border" title="Login"
+                                        data-href="#">
+                                        <span class="cell-align-left" aria-hidden="true">Login</span>
+                                    </button>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <small class="display-block">
+                                            <a href="../ValidacaoUsuario/Index?acao=PrimeiroAcesso"
+                                                id="primeiroAcessoLink">Primeiro acesso</a>
+                                        </small>
+                                        <small class="display-block">
+                                            <a href="../ValidacaoUsuario/Index?acao=EsqueciSenha"
+                                                id="esqueciSenhaLink">Esqueci minha senha</a>
+                                        </small>
+                                    </div>
+                                    <div class="col-sm-6 text-align-right">
+                                        <br />
+                                        <small class="display-block">
+                                            <a href="../ValidacaoUsuario/Index?acao=EsqueciSenha">Ajuda</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <script type="text/javascript">
+                function AjustesTela() {
+                    var urlPrimeiroAcesso = '../ValidacaoUsuario/Index' + '?identificacao=' + $("#Identificacao").val() + "&" + "acao=PrimeiroAcesso";
+                    $('#primeiroAcessoLink').attr('href', urlPrimeiroAcesso);
+                    var urlEsqueciSenha = '../ValidacaoUsuario/Index' + '?identificacao=' + $("#Identificacao").val() + "&" + "acao=EsqueciSenha";
+                    $('#esqueciSenhaLink').attr('href', urlEsqueciSenha);
+                }
+
+                function onChangeIdentificacao(element) {
+                    var urlPrimeiroAcesso = '../ValidacaoUsuario/Index' + '?identificacao=' + $("#Identificacao").val() + "&" + "acao=PrimeiroAcesso";
+                    $('#primeiroAcessoLink').attr('href', urlPrimeiroAcesso);
+                    var urlEsqueciSenha = '../ValidacaoUsuario/Index' + '?identificacao=' + $("#Identificacao").val() + "&" + "acao=EsqueciSenha";
+                    $('#esqueciSenhaLink').attr('href', urlEsqueciSenha);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="popover"]').popover({ container: 'body' })
+    });
+
+    $(document).ready(function () {
+        try {
+            $("input[type='text']").each(function () {
+                $(this).attr("autocomplete", "off");
+            });
+        }
+        catch (e) { }
+    });
+
+    function setComprometimento() {
+        var quantidade = parseFloat($('#Quantidade').autoNumeric('get'));
+        var areaPlantio = parseFloat($('#AreaPlantio').autoNumeric('get'));
+
+        if (areaPlantio && areaPlantio != 0)
+            $('#Comprometimento').autoNumeric('set', quantidade / areaPlantio);
+        else
+            $('#Comprometimento').autoNumeric('set', 0);
+    };
+
+    function setValoresMoeda() {
+        var valorMoeda = 0.0;
+        var valorConvertido = 0.0;
+        if (($('#DDLTipoMoeda') &&
+            ($('#DDLTipoMoeda').val() == 'BRL')) ||
+            ($('#TipoMoedaDisplay') &&
+                ($('#TipoMoedaDisplay').val() == 'BRL'))) {
+
+            $("label[for='lblValorMoeda']").text('Valor BRL');
+            $("label[for='lblValorConvertido']").text('Valor USD');
+            var valorMoeda = parseFloat($('#ValorBRL').autoNumeric().val().replace(/\./g, "").replace(",", "."));
+            var valorConvertido = parseFloat($('#ValorUSD').autoNumeric().val().replace(/\./g, "").replace(",", "."));
+        }
+        else {
+            $("label[for='lblValorMoeda']").text('Valor USD');
+            $("label[for='lblValorConvertido']").text('Valor BRL');
+            var valorMoeda = parseFloat($('#ValorUSD').autoNumeric().val().replace(/\./g, "").replace(",", "."));
+            var valorConvertido = parseFloat($('#ValorBRL').autoNumeric().val().replace(/\./g, "").replace(",", "."));
+
+        }
+
+        $('#ValorMoeda').autoNumeric('set', valorMoeda);
+        $('#ValorConvertido').autoNumeric('set', valorConvertido);
+    }
+
+    function ExibeMSGErroNaoTratado() {
+        ExibeMSGWarning('Houve algum erro inesperado na aplicação!<BR/>Consulte o administrador do Sistema.')
+    };
+
+    function ExibeMSGErroFormulario() {
+        ExibeMSGWarning('Há algum campo que necessita de correção!<BR/>Verifique o formulário e corrija-os antes de prosseguir.')
+    };
+
+
+    function ExibeMSGWarning(msg) {
+        var dialogMessage = BootstrapDialog.show({
+            type: BootstrapDialog.TYPE_WARNING,
+            title: 'Atenção',
+            closable: false,
+            message: msg,
+            buttons: [
+                {
+                    id: 'btn-1',
+                    label: 'Ok',
+                    action: function (dialogRef) {
+                        dialogRef.close();
+                    }
+                }
+            ]
+        });
+    };
+
+    function DesligarHoverPartial() {
+        var hoverPartial = $("#hoverPartial");
+        hoverPartial.css("visibility", "hidden");
+        hoverPartial.css("z-index", "-100");
+        hoverPartial.css("background-color", "rgba(255, 255, 255, 0)");
+    };
+
+    function LigarHoverPartial() {
+        var hoverPartial = $("#hoverPartial");
+
+        //setTimeout(function () {
+        hoverPartial.css("visibility", "visible");
+        hoverPartial.css("z-index", "3000");
+        hoverPartial.css("background-color", "rgba(255, 255, 255, 0.55)");
+        //}, 300);
+    };
+
+    function Sair(t) {
+        //Simulando ESC nos Dialogs para não conflitar em dialogs redundantes (mesma ModalCRUD)
+        var e = $.Event("keydown", { keyCode: 27 });
+        t.trigger(e);
+    }
+
+
+    var listaServicos = {
+        1: { edit: '../ServicoAditivoCedula/_Edit', details: '../ServicoAditivoCedula/_Details', detailsNewWindow: '../ServicoAditivoCedula/Details?idServico=ID' },
+        2: { edit: '../ServicoOutro/_Edit', details: '../ServicoOutro/_Details', detailsNewWindow: '../ServicoOutro/Details?idServico=ID' },
+        3: { edit: '../ServicoDuplicata/_Edit', details: '../ServicoDuplicata/_Details', detailsNewWindow: '../ServicoDuplicata/Details?idServico=ID' },
+        4: { edit: '../ServicoCPR/_Edit', details: '../ServicoCPR/_Details', detailsNewWindow: '../ServicoCPR/Details?idServico=ID' },
+        5: { edit: '../ServicoCPRF/_Edit', details: '../ServicoCPRF/_Details', detailsNewWindow: '../ServicoCPRF/Details?idServico=ID' },
+        6: { edit: '../ServicoBaixaCPR/_Edit', details: '../ServicoBaixaCPR/_Details', detailsNewWindow: '../ServicoBaixaCPR/Details?idServico=ID' },
+        7: { edit: '../ServicoHipoteca/_Edit', details: '../ServicoHipoteca/_Details', detailsNewWindow: '../ServicoHipoteca/Details?idServico=ID' },
+        8: { edit: '../ServicoBaixaHipoteca/_Edit', details: '../ServicoBaixaHipoteca/_Details', detailsNewWindow: '../ServicoBaixaHipoteca/Details?idServico=ID' },
+        9: { edit: '../ServicoDacaoPagamento/_Edit', details: '../ServicoDacaoPagamento/_Details', detailsNewWindow: '../ServicoDacaoPagamento/Details?idServico=ID' },
+        10: { edit: '../ServicoCreditoPenhor/_Edit', details: '../ServicoCreditoPenhor/_Details', detailsNewWindow: '../ServicoCreditoPenhor/Details?idServico=ID' },
+        11: { edit: '../ServicoCadastroBanco/_Edit', details: '../ServicoCadastroBanco/_Details', detailsNewWindow: '../ServicoCadastroBanco/Details?idServico=ID' },
+        12: { edit: '../ServicoDesembolso/_Edit', details: '../ServicoDesembolso/_Details', detailsNewWindow: '../ServicoAditivoCedula/Details?idServico=ID' },
+        13: { edit: '../ServicoNovacao/_Edit', details: '../ServicoNovacao/_Details', detailsNewWindow: '../ServicoNovacao/Details?idServico=ID' },
+        14: { edit: '../ServicoCessaoCredito/_Edit', details: '../ServicoCessaoCredito/_Details', detailsNewWindow: '../ServicoCessaoCredito/Details?idServico=ID' },
+        15: { edit: '../ServicoCartaFianca/_Edit', details: '../ServicoCartaFianca/_Details', detailsNewWindow: '../ServicoCartaFianca/Details?idServico=ID' },
+        16: { edit: '../ServicoBuscaTJ/_Edit', details: '../ServicoBuscaTJ/_Details', detailsNewWindow: '../ServicoBuscaTJ/Details?idServico=ID' },
+        17: { edit: '../ServicoOpBarter/_Edit', details: '../ServicoOpBarter/_Details', detailsNewWindow: '../ServicoOpBarter/Details?idServico=ID' },
+        18: { edit: '../ServicoAPrazo/_Edit', details: '../ServicoAPrazo/_Details', detailsNewWindow: '../ServicoAPrazo/Details?idServico=ID' },
+        19: { edit: '../ServicoEstruturado/_Edit', details: '../ServicoEstruturado/_Details', detailsNewWindow: '../ServicoEstruturado/Details?idServico=ID' }
+    };
+
+    function Confirmacao(msg, confirmFunction, idRegistro) {
+        var dialogMessage = BootstrapDialog.show({
+            type: BootstrapDialog.TYPE_WARNING,
+            title: 'Confirmação',
+            closable: false,
+            message: 'Deseja ' + msg,
+            buttons: [
+                {
+                    id: 'btnConfirmar',
+                    label: 'Confirmar',
+                    action: function (dialogRef) {
+                        confirmFunction(idRegistro, function () {
+                            dialogRef.close();
+                        });
+                    }
+                },
+                {
+                    id: 'btnCancelar',
+                    label: 'Cancelar',
+                    action: function (dialogRef) {
+                        dialogRef.close();
+                    }
+                }
+            ]
+        });
+    };
+
+    function ConfirmacaoTextoLivre(msg, confirmFunction, idRegistro) {
+        var dialogMessage = BootstrapDialog.show({
+            type: BootstrapDialog.TYPE_WARNING,
+            title: 'Confirmação',
+            closable: false,
+            message: msg,
+            buttons: [
+                {
+                    id: 'btnConfirmar',
+                    label: 'Confirmar',
+                    action: function (dialogRef) {
+                        confirmFunction(idRegistro, function () {
+                            dialogRef.close();
+                        });
+                    }
+                },
+                {
+                    id: 'btnCancelar',
+                    label: 'Cancelar',
+                    action: function (dialogRef) {
+                        dialogRef.close();
+                    }
+                }
+            ]
+        });
+    };
+
+    function ConfirmacaoTextoLivreOldValue(msg, confirmFunction, nConfirmFunction, oldValue) {
+        var dialogMessage = BootstrapDialog.show({
+            type: BootstrapDialog.TYPE_WARNING,
+            title: 'Confirmação',
+            closable: false,
+            message: msg,
+            buttons: [
+                {
+                    id: 'btnConfirmar',
+                    label: 'Confirmar',
+                    action: function (dialogRef) {
+                        confirmFunction(function () {
+                            dialogRef.close();
+                        });
+                    }
+                },
+                {
+                    id: 'btnCancelar',
+                    label: 'Cancelar',
+                    action: function (dialogRef) {
+                        nConfirmFunction(function () {
+                            dialogRef.close();
+                        });
+                    }
+                }
+            ]
+        });
+    };
+
+</script>

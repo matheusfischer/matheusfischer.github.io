@@ -1,0 +1,26 @@
+@import 'colors.css';
+@import 'fonts.css';
+@import 'buttons.css';
+@import 'forms.css';
+@import 'menu.css';
+@import 'views.css';
+
+* {
+    font-family: "Roboto","Helvetica","Arial",sans-serif
+}
+
+.remove-border {
+    border: none;
+}
+
+.unset-font-style {
+    font-style: unset;
+}
+
+.display-block {
+    display: block;
+}
+
+.text-align-right {
+    text-align: right;
+}

@@ -1,0 +1,18 @@
+.panel-heading-logo {
+    background: url(../../../Images/LogoEmpresaMini.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 78%;
+
+    height: 200px;
+}
+
+.panel-login {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.panel-login .buttons {
+    text-align: center;
+    margin: 25px 0;
+}
