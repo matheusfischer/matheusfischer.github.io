@@ -28,16 +28,46 @@
     display: flex;
     width: 100%;
     align-items: stretch;
+    min-height: 100vh;
 }
 
 #sidebar {
+    position: relative;
+
     min-width: 250px;
     max-width: 250px;
-    background-color: rgb(238, 116, 8);
-    background-image: url(../../Images/navbar-bg-multiply.png);
+    background-image: linear-gradient(to bottom, rgb(249, 150, 60) 0%, rgb(238, 116, 8) 100%), url(../../Images/navbar-bg-multiply.png);
     background-blend-mode: multiply;
-    background-position: left;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
     color: #fff;
+
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    
+    margin: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(60,60,60,0.65);
 }
 
 #sidebar a {
@@ -56,8 +86,30 @@
     background-image: url(../../Images/LogoEmpresaBranco.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 75px;
+    background-position: top;
+    height: 85px;
+    border-bottom: 1px solid rgb(249, 150, 60);
+}
+
+#sidebar .user-menu {
+    padding: 0;
+    border-bottom: 1px solid rgb(249, 150, 60);
+}
+
+#sidebar .user-menu .user-image {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #666;
+    border: 1px solid #666;
+    border-radius: 30px;
+}
+
+#sidebar .user-menu .user-image i {
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    width: 95%;
 }
 
 #sidebar ul.components {
@@ -65,19 +117,75 @@
     border-bottom: 1px solid rgb(249, 150, 60);
 }
 
+#sidebar ul.components i.nc-icon {
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 #sidebar ul p {
     color: #fff;
     padding: 10px;
+}
+
+#sidebar ul li a .caret {
+    top: 23px;
+    position: absolute;
+    right: 20px;
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+
+    transition: all 150ms ease-in;
+}
+
+a[data-toggle=collapse][aria-expanded=true] .caret {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#sidebar ul li {
+    position: relative;
 }
 
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+
+    transition: all 200ms;
+}
+
+#sidebar ul li a:active,
+#sidebar ul li a:focus {
+    text-decoration: none;
+}
+
+#sidebar ul.components li a {
+    line-height: 31px;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
-#sidebar ul li span.glyphicon {
+#sidebar ul.components li ul li a {
+    line-height: 21px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: none;
+}
+
+#sidebar ul.components li span.glyphicon {
     margin-right: 10px;
     vertical-align: sub;
     font-size: 20px;
