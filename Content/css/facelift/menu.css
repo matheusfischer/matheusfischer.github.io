@@ -1,9 +1,3 @@
-/*
-    DEMO STYLE
-*/
-
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -39,7 +33,9 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: rgb(238, 116, 8);
+    background-color: rgb(238, 116, 8);
+    background-image: url(../../Images/navbar-bg-multiply.png);
+    background-blend-mode: multiply;
     color: #fff;
 }
 
@@ -57,10 +53,10 @@
 
 #sidebar .sidebar-header .sidebar-logo {
     background-image: url(../../Images/LogoEmpresaBranco.png);
-    background-size: 90%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
+    background-position: left;
+    height: 75px;
 }
 
 #sidebar ul.components {
