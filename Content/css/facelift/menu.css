@@ -36,6 +36,7 @@
     background-color: rgb(238, 116, 8);
     background-image: url(../../Images/navbar-bg-multiply.png);
     background-blend-mode: multiply;
+    background-position: left;
     color: #fff;
 }
 
@@ -55,7 +56,7 @@
     background-image: url(../../Images/LogoEmpresaBranco.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     height: 75px;
 }
 
