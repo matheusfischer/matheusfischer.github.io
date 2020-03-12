@@ -21,7 +21,7 @@ a:focus,
 }
 
 .color-primary-background {
-    background-color: rgb(249, 150, 60);
+    background-color: rgb(249, 150, 60) !important;
 }
 
 .color-primary-button {
