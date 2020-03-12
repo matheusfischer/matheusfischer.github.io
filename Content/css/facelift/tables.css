@@ -29,7 +29,7 @@ table tr {
 }
 
 .pagination-controls {
-
+    margin: 10px;
 }
 
 .pagination-controls button {
