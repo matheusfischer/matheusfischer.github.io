@@ -32,7 +32,7 @@
 }
 
 #sidebar {
-    position: relative;
+    position: fixed;
 
     min-width: 250px;
     max-width: 250px;
@@ -264,13 +264,13 @@ a.article:hover {
 }
 
 .container .content-body {
-    padding: 10px;
-    width: 100%;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 15px 0 0 0;
 }
 
 .container .content-body .content-container {
     background: #fff;
     border: 1px solid #CCC;
     border-radius: 5px;
-    padding: 10px;
 }

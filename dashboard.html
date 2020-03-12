@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Content/Gridmvc.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="Content/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="Content/bootstrap-toggle.css" rel="stylesheet" />
+    <link href="Content/css/select2.css" rel="stylesheet" />
+    <link href="Content/css/Site.css" rel="stylesheet" />
+
+    <link href="Content/themes/bootstrap/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="Content/css/facelift/facelift.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/autoNumeric/autoNumeric-1.9.25.js"></script>
+    <script src="Scripts/jquery.mask.js"></script>
+
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.custom.pt-br.js"></script>
+    <script src="Scripts/methods_pt.js"></script>
+    <script src="Scripts/jquery.inputmask.bundle.min.js"></script>
+
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-dialog.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/bootstrap-toggle.js"></script>
+    <script src="Scripts/select2.js"></script>
+    <script src="Scripts/jquery.floatThead.js"></script>
+
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+
+    <script src="Scripts/bootstrap-filestyle.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap-timepicker.js"></script>
+    <script src="Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+    <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+
+    <script>
+        var randomScalingFactor = function () {
+            return Math.round(Math.random() * 100);
+        };
+
+        var config = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                    ],
+                    backgroundColor: [
+                        window.chartColors.blue,
+                        window.chartColors.yellow,
+                        window.chartColors.red,
+                        window.chartColors.green,
+                        window.chartColors.orange,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Documentos iniciais',
+                    'Coleta de assinatura',
+                    'Em registro',
+                    'Validação final',
+                    'Sem pendência'
+                ]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'bottom',
+                    align: 'start',
+                    fullWidth: true
+                }
+            }
+        };
+
+        // document.getElementById('randomizeData').addEventListener('click', function() {
+        // 	config.data.datasets.forEach(function(dataset) {
+        // 		dataset.data = dataset.data.map(function() {
+        // 			return randomScalingFactor();
+        // 		});
+        // 	});
+
+        // 	window.myPie.update();
+        // });
+
+        var colorNames = Object.keys(window.chartColors);
+        // document.getElementById('addDataset').addEventListener('click', function() {
+        // 	var newDataset = {
+        // 		backgroundColor: [],
+        // 		data: [],
+        // 		label: 'New dataset ' + config.data.datasets.length,
+        // 	};
+
+        // 	for (var index = 0; index < config.data.labels.length; ++index) {
+        // 		newDataset.data.push(randomScalingFactor());
+
+        // 		var colorName = colorNames[index % colorNames.length];
+        // 		var newColor = window.chartColors[colorName];
+        // 		newDataset.backgroundColor.push(newColor);
+        // 	}
+
+        // 	config.data.datasets.push(newDataset);
+        // 	window.myPie.update();
+        // });
+
+        // document.getElementById('removeDataset').addEventListener('click', function() {
+        // 	config.data.datasets.splice(0, 1);
+        // 	window.myPie.update();
+        // });
+
+        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var config2 = {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    fill: false,
+                }, {
+                    label: 'My Second dataset',
+                    fill: false,
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        var config3 = {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+                datasets: [{
+                    label: 'Aberto',
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Formalizado',
+                    backgroundColor: window.chartColors.orange,
+                    borderColor: window.chartColors.orange,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Finalizado',
+                    backgroundColor: window.chartColors.green,
+                    borderColor: window.chartColors.green,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Cancelado',
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        }
+
+        window.onload = function () {
+            var ctx1 = document.getElementById('chart-1').getContext('2d');
+            window.myLine = new Chart(ctx1, config3);
+
+            var ctx0 = document.getElementById('chart-0').getContext('2d');
+            window.myPie = new Chart(ctx0, config);
+        };
+
+        var colorNames = Object.keys(window.chartColors);
+    </script>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"></div>
+            </div>
+            <ul class="list-unstyled user-menu">
+                <li>
+                    <a href="#menu-user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="user-image">
+                            <i class="nc-icon nc-single-02"></i>
+                        </div>
+                        Júlia Alimari
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-user">
+                        <li>
+                            <a href="#">Meu perfil</a>
+                            <a href="#">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled components">
+                <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
+                <li>
+                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false" aria-controls="menu-cadastro"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-bullet-list-67"></i>Cadastro
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-cadastro">
+                        <li>
+                            <a href="#">Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Pessoas</a>
+                        </li>
+                        <li>
+                            <a href="#">Imóveis</a>
+                        </li>
+                        <li>
+                            <a href="#">Procurações</a>
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li>
+                    <a href="#menu-admin" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-badge"></i>Administração
+                        <b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-admin">
+                        <li>
+                            <a href="#">Unidades de medida</a>
+                        </li>
+                        <li>
+                            <a href="#">Culturas</a>
+                        </li>
+                        <li>
+                            <a href="#">Usuários</a>
+                        </li>
+                        <li>
+                            <a href="#">Fases de formalização</a>
+                        </li>
+                        <li>
+                            <a href="#">Responsáveis por pendências</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de documentos digitalizados</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de serviço</a>
+                        </li>
+                        <li>
+                            <a href="#">Follow-up</a>
+                        </li>
+                        <li>
+                            <a href="#">Aviso de vencimento</a>
+                        </li>
+                        <li>
+                            <a href="#">Dados remetente e-mail</a>
+                        </li>
+                        <li>
+                            <a href="#">Taxas de câmbio USD</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="nc-icon nc-notes"></i>Processos</a></li>
+                <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
+                <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
+                <li><a href="#"><i class="nc-icon nc-grid-45"></i>Kanban</a></li>
+                <li>
+                    <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
+                            class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-upload">
+                        <li>
+                            <a href="#">Carga de duplicatas</a>
+                            <a href="#">Área de upload</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-help" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-help">
+                        <li>
+                            <a href="#">Manual do usuário</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="panel">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h3>Casos por regional</h3>
+                                    <p>Descrição do gráfico</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Regional</th>
+                                                <th>Casos</th>
+                                                <th>%</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>MT</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Norte</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Centro</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sul</td>
+                                                <td>0</td>
+                                                <td>0%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-xs-6 text-align-center">
+                                    <img width="65%" src="Content/Images/Brazil_states.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="panel pie-graph">
+                            <h3>Casos por fase</h3>
+                            <p>Abertos</p>
+                            <canvas id="chart-0" height="325px"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="panel pie-graph">
+                            <h3>Casos por status</h3>
+                            <p>Descrição do gráfico</p>
+                            <canvas id="chart-1"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

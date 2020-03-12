@@ -54,6 +54,10 @@ button.close {
     text-align: right;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .nc-bin {
     background-image: url(../../Images/bin-666.svg);
     width: 18px;
@@ -75,4 +79,8 @@ button.close {
 }
 .nc-pencil:hover {
     background-image: url(../../Images/pencil-f9963c.svg);
+}
+
+.panel {
+    padding-bottom: 15px;
 }
