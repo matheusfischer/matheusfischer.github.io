@@ -2,3 +2,14 @@
     height: auto;
     padding-left: 15px;
 }
+
+.state {
+    fill: #ddc;
+    fill-opacity: 1;
+  }
+  
+  .state_contour {
+    fill: none;
+    stroke: black;
+    stroke-linejoin: round;
+  }

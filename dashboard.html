@@ -43,6 +43,10 @@
     <script src="Scripts/bootstrap-timepicker.js"></script>
     <script src="Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
 
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+
     <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
     <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 
@@ -88,42 +92,6 @@
                 }
             }
         };
-
-        // document.getElementById('randomizeData').addEventListener('click', function() {
-        // 	config.data.datasets.forEach(function(dataset) {
-        // 		dataset.data = dataset.data.map(function() {
-        // 			return randomScalingFactor();
-        // 		});
-        // 	});
-
-        // 	window.myPie.update();
-        // });
-
-        var colorNames = Object.keys(window.chartColors);
-        // document.getElementById('addDataset').addEventListener('click', function() {
-        // 	var newDataset = {
-        // 		backgroundColor: [],
-        // 		data: [],
-        // 		label: 'New dataset ' + config.data.datasets.length,
-        // 	};
-
-        // 	for (var index = 0; index < config.data.labels.length; ++index) {
-        // 		newDataset.data.push(randomScalingFactor());
-
-        // 		var colorName = colorNames[index % colorNames.length];
-        // 		var newColor = window.chartColors[colorName];
-        // 		newDataset.backgroundColor.push(newColor);
-        // 	}
-
-        // 	config.data.datasets.push(newDataset);
-        // 	window.myPie.update();
-        // });
-
-        // document.getElementById('removeDataset').addEventListener('click', function() {
-        // 	config.data.datasets.splice(0, 1);
-        // 	window.myPie.update();
-        // });
-
         var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         var config2 = {
             type: 'line',
@@ -191,7 +159,6 @@
                 }
             }
         };
-
         var config3 = {
             type: 'bar',
             data: {
@@ -269,9 +236,71 @@
 
             var ctx0 = document.getElementById('chart-0').getContext('2d');
             window.myPie = new Chart(ctx0, config);
+
+            // Define map size on screen
+            var width = 300,
+                height = 300;
+
+            var svg = d3.select(".brazil-graph").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var g = svg.append("g");
+
+            var zoom = d3.behavior.zoom()
+                .translate([0, 0])
+                .scale(.5)
+                .scaleExtent([1, 8])
+                .on("zoom", zoomed);
+
+            svg.call(zoom) // delete this line to disable free zooming
+                .call(zoom.event);
+
+            // Align center of Brazil to center of map
+            var projection = d3.geo.mercator()
+                .scale(650)
+                .center([-70, 0])
+                .translate([width / 2, height / 2]);
+
+            var path = d3.geo.path()
+                .projection(projection);
+
+            // Load data (asynchronously)
+            d3_queue.queue()
+                .defer(d3.json, "Content/json/brazil-states.json")
+                .await(ready);
+
+            function ready(error, shp) {
+                if (error) throw error;
+
+                // Extracting polygons and contours
+                var states = topojson.feature(shp, shp.objects.estados);
+                var states_contour = topojson.mesh(shp, shp.objects.estados);
+
+                // Desenhando estados
+                g.selectAll(".estado")
+                    .data(states.features)
+                    .enter()
+                    .append("path")
+                    .attr("class", "state")
+                    .attr("d", path);
+
+                g.append("path")
+                    .datum(states_contour)
+                    .attr("d", path)
+                    .attr("class", "state_contour");
+            }
+
+            // What to do when zooming
+            function zoomed() {
+                g.style("stroke-width", 1.5 / d3.event.scale + "px");
+                g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+            }
+            d3.select(self.frameElement).style("height", height + "px");
+
         };
 
-        var colorNames = Object.keys(window.chartColors);
+
     </script>
 </head>
 
@@ -437,8 +466,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="col-xs-6 text-align-center">
-                                    <img width="65%" src="Content/Images/Brazil_states.svg" />
+                                <div class="col-xs-6 text-align-center brazil-graph">
                                 </div>
                             </div>
                         </div>
