@@ -1,0 +1,42 @@
+.action-bar {
+    background-color: #FFF;
+    border-bottom: 1px solid #CCC;
+    padding: 10px;
+    display: flex;
+    color: #666
+}
+
+.action-bar .title {
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+.action-bar .search-container {
+    position: relative;
+    background-color: #FFF;
+    display: inline-block;
+    max-width: 300px;
+    min-width: 300px;
+
+    margin-left: 50px;
+}
+
+.action-bar .search-container i {
+    position: absolute;
+    font-size: 20px;
+}
+
+.action-bar .search-container .search-form-field {
+    border: none;
+    box-shadow: none;
+    padding-left: 25px;
+}
+
+.action-bar .search-container .search-form-field:focus,
+.action-bar .search-container .search-form-field:active {
+    box-shadow: none;
+}
+
+.action-bar .btn {
+    font-size: 12px;
+}

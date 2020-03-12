@@ -2,6 +2,7 @@
 @import 'fonts.css';
 @import 'buttons.css';
 @import 'forms.css';
+@import 'tables.css';
 @import 'menu.css';
 @import 'views.css';
 
@@ -51,4 +52,27 @@ button.close {
 
 .text-align-right {
     text-align: right;
+}
+
+.nc-bin {
+    background-image: url(../../Images/bin-666.svg);
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+
+.nc-bin:hover {
+    background-image: url(../../Images/bin-f9963c.svg);
+}
+
+.nc-pencil {
+    background-image: url(../../Images/pencil-666.svg);
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+}
+.nc-pencil:hover {
+    background-image: url(../../Images/pencil-f9963c.svg);
 }

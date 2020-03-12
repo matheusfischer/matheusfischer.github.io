@@ -1,0 +1,57 @@
+table {
+    width: 100%;
+}
+
+table tr {
+    height: 30px;
+    background-color: #EEE;
+}
+
+table th {
+    border-bottom: 1px solid #666;
+    background: #FFF;
+}
+
+table tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+table tr td.actions {
+    font-size: 18px;
+}
+
+table tr td a {
+    color: #666;
+}
+
+table tr {
+    height: 40px;
+}
+
+.pagination-controls {
+
+}
+
+.pagination-controls button {
+    background: #FFF;
+    border: 1px solid #CCC;
+    color: #666;
+    font-weight: 500;
+}
+
+.pagination-controls button:hover {
+    color: #FFF;
+    background-color: rgba(238, 116, 8, 0.75);
+}
+
+.pagination-controls button:focus,
+.pagination-controls button:active {
+    outline: none;
+}
+
+.pagination-controls button.active {
+    background: #FFF;
+    color: rgb(238, 116, 8);
+    border: 1px solid rgb(238, 116, 8);
+    font-weight: 500;
+}

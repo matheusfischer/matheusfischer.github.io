@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Content/Gridmvc.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="Content/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="Content/bootstrap-toggle.css" rel="stylesheet" />
+    <link href="Content/css/select2.css" rel="stylesheet" />
+    <link href="Content/css/Site.css" rel="stylesheet" />
+
+    <link href="Content/themes/bootstrap/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="Content/css/facelift/facelift.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/autoNumeric/autoNumeric-1.9.25.js"></script>
+    <script src="Scripts/jquery.mask.js"></script>
+
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.custom.pt-br.js"></script>
+    <script src="Scripts/methods_pt.js"></script>
+    <script src="Scripts/jquery.inputmask.bundle.min.js"></script>
+
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-dialog.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/bootstrap-toggle.js"></script>
+    <script src="Scripts/select2.js"></script>
+    <script src="Scripts/jquery.floatThead.js"></script>
+
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+
+    <script src="Scripts/bootstrap-filestyle.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap-timepicker.js"></script>
+    <script src="Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+    </head>
+
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"></div>
+            </div>
+            <ul class="list-unstyled user-menu">
+                <li>
+                    <a href="#menu-user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="user-image">
+                            <i class="nc-icon nc-single-02"></i>
+                        </div>
+                        Júlia Alimari
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-user">
+                        <li>
+                            <a href="#">Meu perfil</a>
+                            <a href="#">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled components">
+                <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
+                <li>
+                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false"
+                        aria-controls="menu-cadastro" class="dropdown-toggle">
+                        <i class="nc-icon nc-bullet-list-67"></i>Cadastro
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-cadastro">
+                        <li>
+                            <a href="#">Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Pessoas</a>
+                        </li>
+                        <li>
+                            <a href="#">Imóveis</a>
+                        </li>
+                        <li>
+                            <a href="#">Procurações</a>
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li>
+                    <a href="#menu-admin" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-badge"></i>Administração
+                        <b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-admin">
+                        <li>
+                            <a href="#">Unidades de medida</a>
+                        </li>
+                        <li>
+                            <a href="#">Culturas</a>
+                        </li>
+                        <li>
+                            <a href="#">Usuários</a>
+                        </li>
+                        <li>
+                            <a href="#">Fases de formalização</a>
+                        </li>
+                        <li>
+                            <a href="#">Responsáveis por pendências</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de documentos digitalizados</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de serviço</a>
+                        </li>
+                        <li>
+                            <a href="#">Follow-up</a>
+                        </li>
+                        <li>
+                            <a href="#">Aviso de vencimento</a>
+                        </li>
+                        <li>
+                            <a href="#">Dados remetente e-mail</a>
+                        </li>
+                        <li>
+                            <a href="#">Taxas de câmbio USD</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="nc-icon nc-notes"></i>Processos</a></li>
+                <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
+                <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
+                <li><a href="#"><i class="nc-icon nc-grid-45"></i>Kanban</a></li>
+                <li>
+                    <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
+                            class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-upload">
+                        <li>
+                            <a href="#">Carga de duplicatas</a>
+                            <a href="#">Área de upload</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-help" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b
+                            class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-help">
+                        <li>
+                            <a href="#">Manual do usuário</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">    
+            <div class="action-bar">
+                <div class="col-xs-6">
+                    <span class="title">Processos</span>
+                    <div class="search-container">
+                        <i class="nc-icon nc-zoom-split"></i>
+                        <input type="text" class="search-form-field" placeholder="Buscar" />
+                    </div>
+                </div>
+                <div class="col-xs-6 text-align-right">
+                    <button class="btn btn-primary color-primary-button remove-border">Novo</button>
+                    <button class="btn btn-primary color-primary-button remove-border">Exportar</button>
+                    <button class="btn btn-primary color-primary-button remove-border">Exportar SLAs</button>
+                    <button class="btn btn-primary color-primary-button remove-border">Incluir data cobrança</button>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="content-container col-xs-12">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Tipo de serviço</th>
+                                <th>Número do documento</th>
+                                <th>Status</th>
+                                <th>Traffic-light</th>
+                                <th>Empresa/Revenda</th>
+                                <th>Cliente</th>
+                                <th>Emitente/Terceiro</th>
+                                <th>Vencimento</th>
+                                <th>Entrada</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                            <tr>
+                                <td class="actions">
+                                    <a href="#"><i class="nc-icon nc-pencil"></i></a>
+                                    <a href="#"><i class="nc-icon nc-zoom-split"></i></a>
+                                    <a href="#"><i class="nc-icon nc-settings-tool-66"></i></a>
+                                    <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                </td>
+                                <td>CPR</td>
+                                <td>00/000/2020</td>
+                                <td>Aberto</td>
+                                <td></td>
+                                <td>BASF</td>
+                                <td>COOPSEMA</td>
+                                <td>Maristela Penajo de Souza</td>
+                                <td>30/08/2020</td>
+                                <td>09/03/2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination-controls">
+                        <div class="btn-group">
+                            <button class="btn active">1</button>
+                            <button class="btn">2</button>
+                            <button class="btn"><i class="nc-icon nc-stre-right"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+<!--            <div class="homeBody">
+                <table border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:24pt; font-weight:bold; padding-top:100px;">
+                                <img class="imgLogoGrande" alt="imgHome" src="/Content/Images/LogoEmpresa.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:24pt; font-weight:bold; color:rgba(0, 0, 0, 0.55); padding-top:15px;">
+                                Gestão de Serviços
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="homeFooter">
+                <hr class="hr-RodapeHome-Intelity">
+                <table border="0" style="font-size:9pt; width:100%">
+                    <tbody>
+                        <tr>
+                            <td style="width:30%; font-size:9pt; text-align:left">
+                                Versão 2.0.1
+                            </td>
+                            <td style="width:30%; font-size:9pt">
+
+                            </td>
+                            <td style="text-align:right">
+                                julia.alimari@aronecoutinhoadv.com.br
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            -->
+        </div>
+    </div>
+</body>
