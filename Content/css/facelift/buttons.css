@@ -4,3 +4,20 @@
     text-transform: uppercase;
     letter-spacing: 0;
 }
+
+.btn.flat {
+    background: transparent;
+    color: #666;
+}
+
+.btn.flat:hover {
+    background: rgba(0,0,0,0.10);
+}
+
+.btn.round {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    margin-left: 0px;
+    padding: 0px;
+}

@@ -2,3 +2,65 @@
 @import 'views/upload.css';
 @import 'views/dashboard.css';
 @import 'views/action-bar.css';
+
+.mini-panel-container .panel {
+    padding: 0 10px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mini-panel-container .col-xs-2:nth-child(1) > .panel {
+    background:  #ffa726;
+}
+
+.mini-panel-container .col-xs-2:nth-child(2) > .panel {
+    background:  #ff9800;
+}
+
+.mini-panel-container .col-xs-2:nth-child(3) > .panel {
+    background:  #fb8c00;
+}
+.mini-panel-container .col-xs-2:nth-child(4) > .panel {
+    background:  #f57c00;
+}
+.mini-panel-container .col-xs-2:nth-child(5) > .panel {
+    background:  #ef6c00;
+}
+.mini-panel-container .col-xs-2:nth-child(6) > .panel {
+    background:  #e65100;
+}
+
+.notification-container {
+    height: 100%;
+}
+
+.notification-entry {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.notification-entry a {
+    font-weight: bold;
+}
+
+.notification-entry:nth-child(odd) {
+    background-color: #eee;
+}
+
+.notification-entry:hover {
+    background-color: #ffe0b2;
+}
+
+.panel.notifications {
+}
+
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }

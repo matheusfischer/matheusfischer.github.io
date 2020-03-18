@@ -92,73 +92,6 @@
                 }
             }
         };
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        var config2 = {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: window.chartColors.red,
-                    borderColor: window.chartColors.red,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ],
-                    fill: false,
-                }, {
-                    label: 'My Second dataset',
-                    fill: false,
-                    backgroundColor: window.chartColors.blue,
-                    borderColor: window.chartColors.blue,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ],
-                }]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    text: 'Chart.js Line Chart'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Month'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
         var config3 = {
             type: 'bar',
             data: {
@@ -230,12 +163,140 @@
             }
         }
 
+        var config4 = {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+                datasets: [{
+                    label: 'Valor',
+                    backgroundColor: window.chartColors.orange,
+                    borderColor: window.chartColors.orange,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        display: true,
+                    }],
+                    yAxes: [{
+                        display: true,
+                    }]
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        };
+
+        var config5 = {
+            type: 'bar',
+            data: {
+                labels: ['2019/2020', '2020/2020'],
+                datasets: [{
+                    label: 'Risco muito alto',
+                    borderColor: window.chartColors.blue,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.blue,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Risco alto',
+                    borderColor: window.chartColors.orange,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.orange,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Com excecao',
+                    borderColor: window.chartColors.green,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.green,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Com copia',
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.red,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Sem risco',
+                    borderColor: window.chartColors.yellow,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.yellow,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Sem pendencia',
+                    borderColor: window.chartColors.purple,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.purple,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Cancelado',
+                    borderColor: window.chartColors.grey,
+                    borderWidth: 1,
+                    backgroundColor: window.chartColors.grey,
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        }
+
+
         window.onload = function () {
             var ctx1 = document.getElementById('chart-1').getContext('2d');
             window.myLine = new Chart(ctx1, config3);
 
             var ctx0 = document.getElementById('chart-0').getContext('2d');
             window.myPie = new Chart(ctx0, config);
+
+            var ctx2 = document.getElementById('chart-2').getContext('2d');
+            window.myLine = new Chart(ctx2, config4);
+
+            var ctx4 = document.getElementById('chart-4').getContext('2d');
+            window.myLine = new Chart(ctx4, config5);
 
             // Define map size on screen
             var width = 300,
@@ -333,8 +394,8 @@
             <ul class="list-unstyled components">
                 <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
                 <li>
-                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false"
-                        aria-controls="menu-cadastro" class="dropdown-toggle">
+                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false" aria-controls="menu-cadastro"
+                        class="dropdown-toggle">
                         <i class="nc-icon nc-bullet-list-67"></i>Cadastro
                         <b class="caret"></b>
                     </a>
@@ -403,7 +464,18 @@
                 <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
                 <li><a href="#"><i class="nc-icon nc-money-coins"></i>Financeiro</a></li>
                 <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
-                <li><a href="#"><i class="nc-icon nc-grid-45"></i>Kanban</a></li>
+                <li>
+                    <a href="#menu-kanban" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle"><i class="nc-icon nc-grid-45"></i>Kanban<b class="caret"></b></a></a>
+                    <ul class="collapse list-unstyled" id="menu-kanban">
+                        <li>
+                            <a href="#">Preventivo</a>
+                        </li>
+                        <li>
+                            <a href="#">Contencioso</a>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
                         class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
@@ -417,8 +489,7 @@
                 </li>
                 <li>
                     <a href="#menu-help" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
-                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b
-                            class="caret"></b></a>
+                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b class="caret"></b></a>
                     <ul class="collapse list-unstyled" id="menu-help">
                         <li>
                             <a href="#">Manual do usuário</a>
@@ -428,7 +499,68 @@
             </ul>
         </nav>
         <div class="container">
+            <div class="action-bar">
+                <div class="col-xs-6">
+                    <span class="title">Painel</span>
+                    <div class="search-container">
+                        <i class="nc-icon nc-zoom-split"></i>
+                        <input type="text" class="search-form-field" placeholder="Buscar" />
+                    </div>
+                </div>
+                <div class="col-xs-6 text-align-right">
+                    <button class="btn flat round btn-primary color-primary-button remove-border">
+                        <i style="font-size: 20px" class="glyphicon glyphicon-option-vertical"></i>
+                    </button>
+                </div>
+            </div>
             <div class="content-body">
+                <div class="row mini-panel-container">
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>10</h2>
+                            <p>operacoes</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>R$ 10</h2>
+                            <p>Valor BRL</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>$ 10</h2>
+                            <p>Valor USD</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>10</h2>
+                            <p>A vencer</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>10</h2>
+                            <p>Vencidas</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="panel">
+                            <h2>10</h2>
+                            <p>Formalizadas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="panel pie-graph">
+                            <h3>Valores garantias</h3>
+                            <p>Descricao do grafico</p>
+                            <canvas id="chart-2" height="100px"></canvas>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="panel">
@@ -488,6 +620,104 @@
                             <h3>Casos por status</h3>
                             <p>Descrição do gráfico</p>
                             <canvas id="chart-1"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="row display-flex">
+                    <div class="col-xs-6">
+                        <div class="panel pie-graph">
+                            <h3>Casos por traffic-light geral</h3>
+                            <p>Descrição do grafico</p>
+                            <canvas id="chart-4"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="panel notifications">
+                            <h3>Notificacoes</h3>
+                            <p>Ultimas movimentacoes</p>
+                            <div class="notification-container">
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                            
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                            
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                            
+                                <div class="notification-entry row">
+                                    <div class="col-xs-1">
+                                        JA
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p>Julia Alimari fez upload de um novo arquivo</p>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <p><a href="#">VER</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
