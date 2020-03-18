@@ -86,19 +86,15 @@ button.close {
     padding-top: 0;
 }
 
-.alert-primary {
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff;
+.panel-action {
+    font-size: 18px;
+    padding-top: 20px;
 }
 
-.alert-secondary {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db;
+.panel-action > a {
+    font-size: 25px;
 }
 
-.alert {
-    border: 1px solid transparent;
-    border-radius: .25rem;
+.panel-action > a:last-child {
+    margin-right: 10px;
 }
