@@ -94,7 +94,3 @@ button.close {
 .panel-action > a {
     font-size: 25px;
 }
-
-.panel-action > a:last-child {
-    margin-right: 10px;
-}
