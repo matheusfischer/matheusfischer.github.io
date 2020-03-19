@@ -96,13 +96,15 @@
     border-bottom: 1px solid rgb(249, 150, 60);
 }
 
-#sidebar .user-menu .user-image {
+.user-image {
     display: inline-block;
-    width: 30px;
-    height: 30px;
     background: #666;
     border: 1px solid #666;
     border-radius: 30px;
+    padding: 10px 5px;
+    line-height: 10px;
+    width: 30px;
+    color: #FFF;
 }
 
 #sidebar .user-menu .user-image i {

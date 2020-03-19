@@ -360,8 +360,6 @@
             d3.select(self.frameElement).style("height", height + "px");
 
         };
-
-
     </script>
 </head>
 
@@ -377,7 +375,7 @@
                 <li>
                     <a href="#menu-user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <div class="user-image">
-                            <i class="nc-icon nc-single-02"></i>
+                            JA
                         </div>
                         Júlia Alimari
                         <b class="caret"></b>
@@ -500,17 +498,177 @@
         </nav>
         <div class="container">
             <div class="action-bar">
-                <div class="col-xs-6">
-                    <span class="title">Painel</span>
-                    <div class="search-container">
-                        <i class="nc-icon nc-zoom-split"></i>
-                        <input type="text" class="search-form-field" placeholder="Buscar" />
+                <div class="row">
+                    <div class="col-xs-2">
+                        <span class="title">Painel</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <script>
+                            $(document).ready(() => {
+                                let extendedActionBarHover = false;
+                                let actionBar = document.querySelector('.action-bar');
+
+                                $('.extended-action-bar').hover(() => {
+                                    extendedActionBarHover = !extendedActionBarHover;
+
+                                    if (!actionBar.contains(document.activeElement))
+                                        $('.extended-action-bar').slideUp();
+                                });
+
+                                $('input.search-form-field')
+                                    .focusin(() => $('.extended-action-bar').slideDown());
+
+                                $('.action-bar > *')
+                                    .focusout(() => {
+                                        if (!actionBar.contains(document.activeElement) && !extendedActionBarHover)
+                                            $('.extended-action-bar').slideUp();
+                                    });
+                            });
+                        </script>
+                        <div class="search-container">
+                            <i class="nc-icon nc-zoom-split"></i>
+                            <input type="text" class="form-control search-form-field" placeholder="Buscar" />
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-align-right context-menu">
+                        <div class="dropdown">
+                            <button class="btn flat round btn-primary color-primary-button remove-border"
+                                data-toggle="dropdown">
+                                <i style="font-size: 20px" class="glyphicon glyphicon-option-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Item A</a></li>
+                                <li><a href="#">Item B</a></li>
+                                <li><a href="#">Item C</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-6 text-align-right">
-                    <button class="btn flat round btn-primary color-primary-button remove-border">
-                        <i style="font-size: 20px" class="glyphicon glyphicon-option-vertical"></i>
-                    </button>
+                <div class="row">
+                    <div class="extended-action-bar">
+                        <div class="row">
+                            <div class="col-xs-2">
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Documento n.
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Terceiro
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Cliente
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Empresa
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Vencimento
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Produto
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Traffic-light
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Status
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Data de entrada
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Regional
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Responsáveis
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Valor
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <h6>Favoritos</h6>
+                                        <a href="#">termo 1</a>
+                                        <a href="#">termo 2</a>
+                                        <a href="#">termo 3</a>
+                                        <a href="#">termo 4</a>
+                                        <a href="#">termo 5</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="content-body">
@@ -561,7 +719,8 @@
                                     <p>Descricao do grafico</p>
                                 </div>
                                 <div class="col-xs-6 text-right panel-action">
-                                    <a href="#" title="Exportar para Excel"><i class="nc-icon nc-cloud-download-93"></i></a>
+                                    <a href="#" title="Exportar para Excel"><i
+                                            class="nc-icon nc-cloud-download-93"></i></a>
                                 </div>
                             </div>
                             <canvas id="chart-2" height="100px"></canvas>
@@ -577,7 +736,8 @@
                                     <p>Descrição do gráfico</p>
                                 </div>
                                 <div class="col-xs-6 text-right panel-action">
-                                    <a href="#" title="Exportar para Excel"><i class="nc-icon nc-cloud-download-93"></i></a>
+                                    <a href="#" title="Exportar para Excel"><i
+                                            class="nc-icon nc-cloud-download-93"></i></a>
                                 </div>
                             </div>
                             <div class="row">
@@ -630,7 +790,8 @@
                                     <p>Descrição do gráfico</p>
                                 </div>
                                 <div class="col-xs-4 text-right panel-action">
-                                    <a href="#" title="Exportar para Excel"><i class="nc-icon nc-cloud-download-93"></i></a>
+                                    <a href="#" title="Exportar para Excel"><i
+                                            class="nc-icon nc-cloud-download-93"></i></a>
                                 </div>
                             </div>
                             <canvas id="chart-0" height="325px"></canvas>
@@ -644,7 +805,8 @@
                                     <p>Descrição do gráfico</p>
                                 </div>
                                 <div class="col-xs-6 text-right panel-action">
-                                    <a href="#" title="Exportar para Excel"><i class="nc-icon nc-cloud-download-93"></i></a>
+                                    <a href="#" title="Exportar para Excel"><i
+                                            class="nc-icon nc-cloud-download-93"></i></a>
                                 </div>
                             </div>
                             <canvas id="chart-1"></canvas>
@@ -660,7 +822,8 @@
                                     <p>Descrição do gráfico</p>
                                 </div>
                                 <div class="col-xs-6 text-right panel-action">
-                                    <a href="#" title="Exportar para Excel"><i class="nc-icon nc-cloud-download-93"></i></a>
+                                    <a href="#" title="Exportar para Excel"><i
+                                            class="nc-icon nc-cloud-download-93"></i></a>
                                 </div>
                             </div>
                             <canvas id="chart-4"></canvas>
@@ -673,7 +836,7 @@
                             <div class="notification-container">
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -684,7 +847,7 @@
                                 </div>
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -695,7 +858,7 @@
                                 </div>
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -704,10 +867,9 @@
                                         <p><a href="#">VER</a></p>
                                     </div>
                                 </div>
-                                
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -716,10 +878,9 @@
                                         <p><a href="#">VER</a></p>
                                     </div>
                                 </div>
-                            
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -728,10 +889,9 @@
                                         <p><a href="#">VER</a></p>
                                     </div>
                                 </div>
-                            
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>
@@ -740,10 +900,9 @@
                                         <p><a href="#">VER</a></p>
                                     </div>
                                 </div>
-                            
                                 <div class="notification-entry row">
                                     <div class="col-xs-1">
-                                        JA
+                                        <div class="user-image">JA</div>
                                     </div>
                                     <div class="col-xs-8">
                                         <p>Julia Alimari fez upload de um novo arquivo</p>

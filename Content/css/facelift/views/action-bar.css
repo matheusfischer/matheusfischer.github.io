@@ -1,9 +1,10 @@
 .action-bar {
     background-color: #FFF;
     border-bottom: 1px solid #CCC;
-    padding: 10px;
-    display: flex;
-    color: #666
+    display: block;
+    color: #666;
+    position: relative;
+    padding: 5px 0;
 }
 
 .action-bar .title {
@@ -14,16 +15,13 @@
 .action-bar .search-container {
     position: relative;
     background-color: #FFF;
-    display: inline-block;
-    max-width: 300px;
-    min-width: 300px;
-
-    margin-left: 50px;
+    width: 100%;
 }
 
 .action-bar .search-container i {
     position: absolute;
     font-size: 20px;
+    top: 8px;
 }
 
 .action-bar .search-container .search-form-field {
@@ -39,4 +37,27 @@
 
 .action-bar .btn {
     font-size: 12px;
+}
+
+.action-bar .context-menu .dropdown-menu {
+    right: 0;
+    left: unset;
+}
+
+.extended-action-bar {
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #CCC;
+    display: none;
+    position: absolute;
+    padding-bottom: 15px;
+    background-color: #FFF;
+}
+
+.form-field {
+    margin: 5px 0;
+}
+
+.context-menu > button, .context-menu > div {
+    display: inline-block;
 }

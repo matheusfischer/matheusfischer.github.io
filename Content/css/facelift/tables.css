@@ -55,3 +55,13 @@ table tr {
     border: 1px solid rgb(238, 116, 8);
     font-weight: 500;
 }
+
+table .nc-icon {
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+}
+
+.cpr {
+    text-align: center;
+}
