@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Content/Gridmvc.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="Content/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="Content/bootstrap-toggle.css" rel="stylesheet" />
+    <link href="Content/css/select2.css" rel="stylesheet" />
+    <link href="Content/css/Site.css" rel="stylesheet" />
+
+    <link href="Content/themes/bootstrap/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="Content/css/facelift/facelift.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/autoNumeric/autoNumeric-1.9.25.js"></script>
+    <script src="Scripts/jquery.mask.js"></script>
+
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.custom.pt-br.js"></script>
+    <script src="Scripts/methods_pt.js"></script>
+    <script src="Scripts/jquery.inputmask.bundle.min.js"></script>
+
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-dialog.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/bootstrap-toggle.js"></script>
+    <script src="Scripts/select2.js"></script>
+    <script src="Scripts/jquery.floatThead.js"></script>
+
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+
+    <script src="Scripts/bootstrap-filestyle.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap-timepicker.js"></script>
+    <script src="Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"></div>
+            </div>
+            <ul class="list-unstyled user-menu">
+                <li>
+                    <a href="#menu-user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="user-image">
+                            JA
+                        </div>
+                        Júlia Alimari
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-user">
+                        <li>
+                            <a href="#">Meu perfil</a>
+                            <a href="#">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled components">
+                <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
+                <li>
+                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false" aria-controls="menu-cadastro"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-bullet-list-67"></i>Cadastro
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-cadastro">
+                        <li>
+                            <a href="#">Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Pessoas</a>
+                        </li>
+                        <li>
+                            <a href="#">Imóveis</a>
+                        </li>
+                        <li>
+                            <a href="#">Procurações</a>
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li>
+                    <a href="#menu-admin" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-badge"></i>Administração
+                        <b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-admin">
+                        <li>
+                            <a href="#">Unidades de medida</a>
+                        </li>
+                        <li>
+                            <a href="#">Culturas</a>
+                        </li>
+                        <li>
+                            <a href="#">Usuários</a>
+                        </li>
+                        <li>
+                            <a href="#">Fases de formalização</a>
+                        </li>
+                        <li>
+                            <a href="#">Responsáveis por pendências</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de documentos digitalizados</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de serviço</a>
+                        </li>
+                        <li>
+                            <a href="#">Follow-up</a>
+                        </li>
+                        <li>
+                            <a href="#">Aviso de vencimento</a>
+                        </li>
+                        <li>
+                            <a href="#">Dados remetente e-mail</a>
+                        </li>
+                        <li>
+                            <a href="#">Taxas de câmbio USD</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="nc-icon nc-notes"></i>Preventivo</a></li>
+                <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
+                <li><a href="#"><i class="nc-icon nc-money-coins"></i>Financeiro</a></li>
+                <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
+                <li>
+                    <a href="#menu-kanban" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle"><i class="nc-icon nc-grid-45"></i>Kanban<b class="caret"></b></a></a>
+                    <ul class="collapse list-unstyled" id="menu-kanban">
+                        <li>
+                            <a href="#">Preventivo</a>
+                        </li>
+                        <li>
+                            <a href="#">Contencioso</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
+                            class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-upload">
+                        <li>
+                            <a href="#">Carga de duplicatas</a>
+                            <a href="#">Área de upload</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-help" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-help">
+                        <li>
+                            <a href="#">Manual do usuário</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="action-bar">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <span class="title">Kanban</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <script>
+                            $(document).ready(() => {
+                                let extendedActionBarHover = false;
+                                let actionBar = document.querySelector('.action-bar');
+
+                                $('.extended-action-bar').hover(() => {
+                                    extendedActionBarHover = !extendedActionBarHover;
+
+                                    if (!actionBar.contains(document.activeElement))
+                                        $('.extended-action-bar').slideUp();
+                                });
+
+                                $('input.search-form-field')
+                                    .focusin(() => $('.extended-action-bar').slideDown());
+
+                                $('.action-bar > *')
+                                    .focusout(() => {
+                                        if (!actionBar.contains(document.activeElement) && !extendedActionBarHover)
+                                            $('.extended-action-bar').slideUp();
+                                    });
+                            });
+                        </script>
+                        <div class="search-container">
+                            <i class="nc-icon nc-zoom-split"></i>
+                            <input type="text" class="form-control search-form-field" placeholder="Buscar" />
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-align-right context-menu">
+                        <div class="dropdown">
+                            <button class="btn flat round btn-primary color-primary-button remove-border"
+                                data-toggle="dropdown">
+                                <i style="font-size: 20px" class="glyphicon glyphicon-option-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Novo processo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="extended-action-bar">
+                        <div class="row">
+                            <div class="col-xs-2">
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Documento n.
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Terceiro
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Cliente
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Empresa
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Vencimento
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Produto
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Traffic-light
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Status
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Data de entrada
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Regional
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Responsáveis
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-6">
+                                                Valor
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <h6>Favoritos</h6>
+                                        <a href="#">termo 1</a>
+                                        <a href="#">termo 2</a>
+                                        <a href="#">termo 3</a>
+                                        <a href="#">termo 4</a>
+                                        <a href="#">termo 5</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body kanban-container">
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Criacao/Cadastro</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Traffic Light</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>CPRF - Priscila Arone Coutinho</p>
+                                <p>N. Documento: 01</p>
+                                <p>Vencimento: 16/03/2020</p>
+                                <p>Valor da garantia: R$ 1.000.000,00</p>
+                                <p>Cliente: Sinagro Produtos Agropec</p>
+                            </div>
+                            <div class="card-status">
+                                <p><i class="glyphicon glyphicon-ok-circle"></i>Garantia Emitida</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar outro cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Autorizacao Trading</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-content">
+                                <p>Autorizacao de Terceiro</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <p>Autorizacao de Prosseguimento</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar outro cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Analise Juridica</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Documentos Pendentes (CLIENTE)</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Documentos Pendentes (EMPRESA)</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Aprovacao de Excecoes</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Assinatura</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag black">
+                                    <span>Prioridade</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-description">
+                                    <p>Jhones Alves Pedrosa</p>
+                                    <div class="description-inline">
+                                        <p class="alert"><i class="glyphicon glyphicon-hourglass"></i>17/03/2020</p>                                        
+                                        <p>Vencimento: 16/03/2020</p>
+                                    </div>
+                                    <p>Valor da Garantia: R$ 15.000.000,00</p>
+                                    <p>Cliente: AgroJhones</p>
+                                </div>
+                                <div class="card-members">
+                                    <div class="member">
+                                        <span>VT</span>
+                                    </div>
+                                </div>
+                                <div class="clear-both"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar outro cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Registro em Cartorio</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Analise Pos Registro</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Analise Pos Registro</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Pos Registro Aprovacao de Excecoes</h6>  
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Garantia Formalizada ✔️</h6>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="tag-container">
+                                <div class="tag red">
+                                    <span>Traffic Light</span>
+                                </div>
+                                <div class="tag blue">
+                                    <span>Baixa Confeccionada</span>
+                                </div>
+                                <div class="tag black">
+                                    <span>Prioridade</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-description">
+                                    <p>Jhones Alves Pedrosa</p>
+                                    <div class="description-inline">
+                                        <p class="alert"><i class="glyphicon glyphicon-hourglass"></i>17/03/2020</p>                                        
+                                        <p>Vencimento: 16/03/2020</p>
+                                    </div>
+                                    <p>Valor da Garantia: R$ 15.000.000,00</p>
+                                    <p>Cliente: AgroJhones</p>
+                                </div>
+                                <div class="card-members">
+                                    <div class="member">
+                                        <span>VT</span>
+                                    </div>
+                                </div>
+                                <div class="clear-both"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar outro cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Garantia Cancelada ❌</h6>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar outro cartao
+                        </button>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <div class="card-header row">
+                        <div class="col-xs-10">
+                            <h6>Identificacao Pagamento</h6>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ordernar por...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                    </div>
+                    <div class="kanban-column-footer">
+                        <button class="btn">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Adicionar um cartao
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

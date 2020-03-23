@@ -1,0 +1,229 @@
+.kanban-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    height: calc(100vh - 51px);
+}
+
+
+/* width */
+.kanban-container::-webkit-scrollbar {
+    width: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Track */
+.kanban-container::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+.kanban-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Handle on hover */
+.kanban-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(60,60,60,0.65);
+}
+
+
+.kanban-column {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-left: 10px;
+
+    background-color: rgb(249, 150, 60);
+    color: #fff;
+
+    max-height: 100%;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.kanban-column:last-child {
+    margin-right: 10px;
+}
+
+.kanban-column .card-header {
+
+}
+
+.kanban-column .card-header .dropdown {
+    margin-top: 8px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.kanban-column .card-header .dropdown a {
+    color: #fff;
+}
+
+.kanban-column .card-header .dropdown-menu a {
+    color: #666;
+}
+
+.kanban-column .card-header a[aria-expanded=true] {
+    background-color: rgba(255,255,255,0.25);
+}
+
+.kanban-column h6 {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.kanban-column:first-child {
+    margin-left: 0;
+}
+
+
+/* width */
+.card-container::-webkit-scrollbar {
+    width: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Track */
+.card-container::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+.card-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Handle on hover */
+.card-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(60,60,60,0.65);
+}
+
+.card-container {
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.card {
+    color: #666;
+    padding: 2px;
+    background-color: white;
+
+    margin: 4px;
+
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    background-color: rgb(250, 250 ,250);
+}
+
+
+.card .tag-container {
+    margin: 2px 5px;
+}
+
+.card .tag-container .tag {
+    padding: 3px;
+    border-radius: 4px;
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+.card .tag-container .tag.red {
+    background-color: rgb(255, 66, 66);
+}
+
+.card .tag-container .tag.blue {
+    background-color: rgb(0, 162, 232);
+}
+
+.card .tag-container .tag.black {
+    background-color: #666;
+}
+
+.card .card-content {
+    margin: 5px;
+}
+
+.card .card-content p {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.card .card-status {
+    margin: 3px;
+}
+
+.card .card-status p i {
+    margin-right: 5px;
+    font-size: 110%;
+}
+
+.kanban-column-footer {
+    margin: 5px 10px;
+}
+
+.kanban-column-footer button {
+    width: 100%;
+    font-size: 12px;
+    background-color: transparent;
+}
+
+.kanban-column-footer button:hover {
+    background-color: rgba(255,255,255,0.25);
+    color: inherit;
+}
+
+.kanban-column-footer button:active, .kanban-column-footer button:focus {
+    background-color: rgba(255,255,255,0.25);
+    color: inherit;
+}
+
+.card .description-inline > p {
+    display: inline-block;
+}
+
+
+.card .description-inline p i {
+    margin-right: 5px;
+    font-size: 110%;
+}
+
+.card .card-description .alert {
+    background-color: rgb(236, 148, 136);
+    border-radius: 5px;
+    padding: 3px;
+    color: #fff;
+}
+
+.card .card-members {
+    text-align: right;
+}
+
+.card .card-members .member {
+    padding: 5px;
+    background-color: #666;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    float: right;
+}
+
+.clear-both {
+    clear: both;
+}
