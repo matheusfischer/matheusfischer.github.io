@@ -67,11 +67,11 @@
                         randomScalingFactor(),
                     ],
                     backgroundColor: [
-                        window.chartColors.blue,
-                        window.chartColors.yellow,
-                        window.chartColors.red,
-                        window.chartColors.green,
                         window.chartColors.orange,
+                        'rgb(0, 162, 232)',
+                        window.chartColors.purple,
+                        'rgb(159, 222, 82)',
+                        window.chartColors.grey,
                     ],
                     label: 'Dataset 1'
                 }],
@@ -98,9 +98,9 @@
                 labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
                 datasets: [{
                     label: 'Aberto',
-                    backgroundColor: window.chartColors.blue,
+                    backgroundColor: 'rgb(255, 66, 66)',
                     borderColor: window.chartColors.blue,
-                    borderWidth: 1,
+                    borderWidth: 0,
                     data: [
                         randomScalingFactor(),
                         randomScalingFactor(),
@@ -112,9 +112,9 @@
                     ]
                 }, {
                     label: 'Formalizado',
-                    backgroundColor: window.chartColors.orange,
+                    backgroundColor: 'rgb(159, 222, 82)',
                     borderColor: window.chartColors.orange,
-                    borderWidth: 1,
+                    borderWidth: 0,
                     data: [
                         randomScalingFactor(),
                         randomScalingFactor(),
@@ -126,9 +126,9 @@
                     ]
                 }, {
                     label: 'Finalizado',
-                    backgroundColor: window.chartColors.green,
+                    backgroundColor: window.chartColors.yellow,
                     borderColor: window.chartColors.green,
-                    borderWidth: 1,
+                    borderWidth: 0,
                     data: [
                         randomScalingFactor(),
                         randomScalingFactor(),
@@ -140,9 +140,9 @@
                     ]
                 }, {
                     label: 'Cancelado',
-                    backgroundColor: window.chartColors.red,
+                    backgroundColor: window.chartColors.grey,
                     borderColor: window.chartColors.red,
-                    borderWidth: 1,
+                    borderWidth: 0,
                     data: [
                         randomScalingFactor(),
                         randomScalingFactor(),
@@ -205,9 +205,9 @@
                 labels: ['2019/2020', '2020/2020'],
                 datasets: [{
                     label: 'Risco muito alto',
-                    borderColor: window.chartColors.blue,
-                    borderWidth: 1,
-                    backgroundColor: window.chartColors.blue,
+                    borderColor: 'rgb(255, 66, 66)',
+                    borderWidth: 0,
+                    backgroundColor: 'rgb(255, 66, 66)',
                     fill: true,
                     data: [
                         randomScalingFactor(),
@@ -215,38 +215,8 @@
                     ]
                 }, {
                     label: 'Risco alto',
-                    borderColor: window.chartColors.orange,
-                    borderWidth: 1,
-                    backgroundColor: window.chartColors.orange,
-                    fill: true,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ]
-                }, {
-                    label: 'Com excecao',
-                    borderColor: window.chartColors.green,
-                    borderWidth: 1,
-                    backgroundColor: window.chartColors.green,
-                    fill: true,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ]
-                }, {
-                    label: 'Com copia',
-                    borderColor: window.chartColors.red,
-                    borderWidth: 1,
-                    backgroundColor: window.chartColors.red,
-                    fill: true,
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor()
-                    ]
-                }, {
-                    label: 'Sem risco',
                     borderColor: window.chartColors.yellow,
-                    borderWidth: 1,
+                    borderWidth: 0,
                     backgroundColor: window.chartColors.yellow,
                     fill: true,
                     data: [
@@ -254,10 +224,40 @@
                         randomScalingFactor()
                     ]
                 }, {
+                    label: 'Com excecao',
+                    borderColor: 'brown',
+                    borderWidth: 0,
+                    backgroundColor: 'brown',
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Com copia',
+                    borderColor: 'rgb(0, 162, 232)',
+                    borderWidth: 0,
+                    backgroundColor: 'rgb(0, 162, 232)',
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Sem risco',
+                    borderColor: 'rgb(159, 222, 82)',
+                    borderWidth: 0,
+                    backgroundColor: 'rgb(159, 222, 82)',
+                    fill: true,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
                     label: 'Sem pendencia',
-                    borderColor: window.chartColors.purple,
-                    borderWidth: 1,
-                    backgroundColor: window.chartColors.purple,
+                    borderColor: '#666',
+                    borderWidth: 0,
+                    backgroundColor: '#666',
                     fill: true,
                     data: [
                         randomScalingFactor(),
