@@ -7,6 +7,11 @@ table tr {
     background-color: #EEE;
 }
 
+table tr:hover > td {
+    cursor: pointer;
+    background-color: #ffe0b2;
+}
+
 table th {
     border-bottom: 1px solid #666;
     background: #FFF;
