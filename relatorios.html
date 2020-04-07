@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Content/Gridmvc.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="Content/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="Content/bootstrap-toggle.css" rel="stylesheet" />
+    <link href="Content/css/select2.css" rel="stylesheet" />
+    <link href="Content/css/Site.css" rel="stylesheet" />
+
+    <link href="Content/themes/bootstrap/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="Content/css/facelift/facelift.css" rel="stylesheet" />
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/autoNumeric/autoNumeric-1.9.25.js"></script>
+    <script src="Scripts/jquery.mask.js"></script>
+
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.custom.pt-br.js"></script>
+    <script src="Scripts/methods_pt.js"></script>
+    <script src="Scripts/jquery.inputmask.bundle.min.js"></script>
+
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-dialog.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <script src="Scripts/bootstrap-toggle.js"></script>
+    <script src="Scripts/select2.js"></script>
+    <script src="Scripts/jquery.floatThead.js"></script>
+
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+
+    <script src="Scripts/bootstrap-filestyle.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap-timepicker.js"></script>
+    <script src="Scripts/locales/bootstrap-datepicker.pt-BR.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"></div>
+            </div>
+            <ul class="list-unstyled user-menu">
+                <li>
+                    <a href="#menu-user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="user-image">
+                            JA
+                        </div>
+                        Júlia Alimari
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-user">
+                        <li>
+                            <a href="#">Meu perfil</a>
+                            <a href="#">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled components">
+                <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
+                <li>
+                    <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false" aria-controls="menu-cadastro"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-bullet-list-67"></i>Cadastro
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse list-unstyled" id="menu-cadastro">
+                        <li>
+                            <a href="#">Empresas</a>
+                        </li>
+                        <li>
+                            <a href="#">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Pessoas</a>
+                        </li>
+                        <li>
+                            <a href="#">Imóveis</a>
+                        </li>
+                        <li>
+                            <a href="#">Procurações</a>
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li>
+                    <a href="#menu-admin" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle">
+                        <i class="nc-icon nc-badge"></i>Administração
+                        <b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-admin">
+                        <li>
+                            <a href="#">Unidades de medida</a>
+                        </li>
+                        <li>
+                            <a href="#">Culturas</a>
+                        </li>
+                        <li>
+                            <a href="#">Usuários</a>
+                        </li>
+                        <li>
+                            <a href="#">Fases de formalização</a>
+                        </li>
+                        <li>
+                            <a href="#">Responsáveis por pendências</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de documentos digitalizados</a>
+                        </li>
+                        <li>
+                            <a href="#">Tipos de serviço</a>
+                        </li>
+                        <li>
+                            <a href="#">Follow-up</a>
+                        </li>
+                        <li>
+                            <a href="#">Aviso de vencimento</a>
+                        </li>
+                        <li>
+                            <a href="#">Dados remetente e-mail</a>
+                        </li>
+                        <li>
+                            <a href="#">Taxas de câmbio USD</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="nc-icon nc-notes"></i>Preventivo</a></li>
+                <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
+                <li><a href="#"><i class="nc-icon nc-money-coins"></i>Financeiro</a></li>
+                <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
+                <li>
+                    <a href="#menu-kanban" data-toggle="collapse" aria-expanded="false" aria-controls="menu-admin"
+                        class="dropdown-toggle"><i class="nc-icon nc-grid-45"></i>Kanban<b class="caret"></b></a></a>
+                    <ul class="collapse list-unstyled" id="menu-kanban">
+                        <li>
+                            <a href="#">Preventivo</a>
+                        </li>
+                        <li>
+                            <a href="#">Contencioso</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
+                            class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-upload">
+                        <li>
+                            <a href="#">Carga de duplicatas</a>
+                            <a href="#">Área de upload</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu-help" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
+                        class="dropdown-toggle"><i class="nc-icon nc-bulb-63"></i>Ajuda<b class="caret"></b></a>
+                    <ul class="collapse list-unstyled" id="menu-help">
+                        <li>
+                            <a href="#">Manual do usuário</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="action-bar">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <span class="title">Relatórios</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <script>
+                            $(document).ready(() => {
+                                let extendedActionBarHover = false;
+                                let actionBar = document.querySelector('.action-bar');
+
+                                $('.extended-action-bar').hover(() => {
+                                    extendedActionBarHover = !extendedActionBarHover;
+
+                                    if (!actionBar.contains(document.activeElement))
+                                        $('.extended-action-bar').slideUp();
+                                });
+
+                                $('input.search-form-field')
+                                    .focusin(() => $('.extended-action-bar').slideDown());
+
+                                $('.action-bar > *')
+                                    .focusout(() => {
+                                        if (!actionBar.contains(document.activeElement) && !extendedActionBarHover)
+                                            $('.extended-action-bar').slideUp();
+                                    });
+                            });
+                        </script>
+                        <div class="search-container">
+                            <i class="nc-icon nc-zoom-split"></i>
+                            <input type="text" class="form-control search-form-field" placeholder="Buscar" />
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-align-right context-menu">
+                        <div class="dropdown">
+                            <button class="btn flat round btn-primary color-primary-button remove-border"
+                                data-toggle="dropdown">
+                                <i style="font-size: 20px" class="glyphicon glyphicon-option-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Novo processo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="extended-action-bar">
+                        <div class="row">
+                            <div class="col-xs-1">
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Documento n.
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Terceiro
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Cliente
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Empresa
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Vencimento
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">De</span>
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Até</span>
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Produto
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Traffic-light
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Status
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <select class="form-control">
+                                                    <option>Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Data de entrada
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">De</span>
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Até</span>
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Regional
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Responsáveis
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Valor
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">De</span>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Até</span>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <h6>Favoritos</h6>
+                                        <p><a href="#">termo 1</a></p>
+                                        <p><a href="#">termo 2</a></p>
+                                        <p><a href="#">termo 3</a></p>
+                                        <p><a href="#">termo 4</a></p>
+                                        <p><a href="#">termo 5</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="content-container col-xs-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

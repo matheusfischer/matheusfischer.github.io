@@ -54,10 +54,32 @@
     background-color: #FFF;
 }
 
+.extended-action-bar .input-group {
+    margin-bottom: 5px;
+    width: 100%;
+
+    font-weight: unset !important;
+}
+
+.extended-action-bar .form-group-label {
+    line-height: 34px;
+}
+ 
+.extended-action-bar .input-group .input-group-addon {
+    font-style: normal !important;
+    text-decoration: unset !important;
+    font-weight: 100 !important;
+    width: 55px;
+}
+
 .form-field {
     margin: 5px 0;
 }
 
 .context-menu > button, .context-menu > div {
     display: inline-block;
+}
+
+.extended-action-bar .col-xs-8 .row .col-xs-12.row:first-child {
+    margin-bottom: 5px;
 }
