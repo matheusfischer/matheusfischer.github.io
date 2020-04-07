@@ -109,7 +109,7 @@
 }
 
 .card-container {
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 135px);
     overflow-y: auto;
 }
 
