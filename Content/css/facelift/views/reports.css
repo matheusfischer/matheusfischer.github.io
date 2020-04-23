@@ -1,0 +1,21 @@
+.checkbox-grid .row {
+    margin: 10px;
+}
+
+.checkbox-grid label {
+    font-weight: normal;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.tab-content ol li {
+    margin: 10px;
+}
+
+.tab-content ol li i {
+    margin: -3px 5px;
+}

@@ -3,6 +3,7 @@
 @import 'views/dashboard.css';
 @import 'views/action-bar.css';
 @import 'views/kanban.css';
+@import 'views/reports.css';
 
 .mini-panel-container .panel {
     padding: 0 10px;
