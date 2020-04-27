@@ -170,6 +170,8 @@
         <div class="container">
             <div class="action-bar">
                 <div class="row">
+                    
+
                     <div class="col-xs-2">
                         <span class="title">Relatórios</span>
                     </div>
@@ -195,10 +197,8 @@
                                             $('.extended-action-bar').slideUp();
                                     });
 
-
                                 $('#selectAll').change((event) => {
-                                    console.log( event.target.checked);
-                                    $('input[type="checkbox"]').attr('checked', event.target.checked);
+                                    $('input[type="checkbox"]').prop('checked', event.target.checked);
                                 });
                             });
                         </script>
@@ -373,14 +373,11 @@
             <div class="content-body">
                 <div class="content-container col-xs-12">
                     <div>
-                        <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                          <li role="presentation" class="active"><a href="#report-1" aria-controls="report-1" role="tab" data-toggle="tab">Relatório personalizado</a></li>
-                          <li role="presentation"><a href="#report-2" aria-controls="report-2" role="tab" data-toggle="tab">Relatório por Status</a></li>
+                          <li role="presentation" class="active"><a href="#report-1" aria-controls="report-1" role="tab" data-toggle="tab">Relatório</a></li>
                           <li role="presentation"><a href="#report-4" aria-controls="report-4" role="tab" data-toggle="tab">Meus Favoritos</a></li>
                         </ul>
                       
-                        <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active checkbox-grid" id="report-1">
 
@@ -523,6 +520,10 @@
                                     <input type="checkbox" />
                                     <label>RTV</label>
                                 </div>
+                                <div class="col-xs-3">
+                                    <input type="checkbox" id="selectAll" />
+                                    <label>Selecionar tudo</label>    
+                                </div>
                                 </div>
                             <div class="row">
                                 <div class="col-xs-3">
@@ -538,8 +539,10 @@
                                     <label>Vencimento</label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input type="checkbox" id="selectAll" />
-                                    <label>Selecionar tudo</label>    
+                                    <button class="btn btn-primary color-primary-button remove-border">
+                                        <i style="font-size: 12px" class="glyphicon glyphicon-star"></i>
+                                    </button>
+                                    <button class="btn btn-primary color-primary-button remove-border">Emitir Relatório</button>
                                 </div>
                                 </div>
                             <div class="row">
@@ -556,41 +559,33 @@
                                     <label>Formalização</label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <button class="btn btn-primary color-primary-button remove-border">
-                                        <i style="font-size: 12px" class="glyphicon glyphicon-star"></i>
-                                    </button>
-                                    <button class="btn btn-primary color-primary-button remove-border">Emitir Relatório</button>
+                                    <button class="btn btn-primary color-primary-button remove-border">Emitir Relatório por Status</button>
                                 </div>
                                 </div>
-
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="report-2">
-                                <p>Relatório de Status</p>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="report-4">
-
-
-<div class="row">
-    <div class="col-xs-6">
-        <h4>Favoritados</h4>
-        <ol>
-            <li><a href="#">Empresa; Traffic-light; Cliente; Nº do documento</a>
-                <a href="#"><i class="nc-icon nc-bin"></i></a>
-            </li>
-            <li><a href="#">Nº do documento; Terceiro; Safra; Commodity</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
-            <li><a href="#">Regional; Status formalização; RTV</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
-        </ol>        
-    </div>
-    <div class="col-xs-6">
-        <h4>Usados recentemente</h4>
-        <ol>
-            <li><a href="#">Empresa; Traffic-light; Cliente; Nº do documento</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
-            <li><a href="#">Nº do documento; Terceiro; Safra; Commodity</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
-            <li><a href="#">Regional; Status formalização; RTV</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
-        </ol>        
-    </div>
-</div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <h4>Favoritados</h4>
+                                        <ol>
+                                            <li><a href="#">Empresa; Traffic-light; Cliente; Nº do documento</a>
+                                                <a href="#"><i class="nc-icon nc-bin"></i></a>
+                                            </li>
+                                            <li><a href="#">Nº do documento; Terceiro; Safra; Commodity</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
+                                            <li><a href="#">Regional; Status formalização; RTV</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
+                                        </ol>        
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h4>Usados recentemente</h4>
+                                        <ol>
+                                            <li><a href="#">Empresa; Traffic-light; Cliente; Nº do documento</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
+                                            <li><a href="#">Nº do documento; Terceiro; Safra; Commodity</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
+                                            <li><a href="#">Regional; Status formalização; RTV</a><a href="#"><i class="nc-icon nc-bin"></i></a></li>
+                                        </ol>        
+                                    </div>
+                                </div>
                             </div>  
+                        </div>
                     </div>                    
                 </div>
             </div>
