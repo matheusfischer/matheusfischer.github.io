@@ -83,3 +83,7 @@
 .extended-action-bar .col-xs-8 .row .col-xs-12.row:first-child {
     margin-bottom: 5px;
 }
+
+.apply-filter-container .col-xs-6 {
+    padding: 4px;
+}

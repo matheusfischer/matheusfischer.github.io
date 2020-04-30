@@ -72,7 +72,7 @@
             </ul>
 
             <ul class="list-unstyled components">
-                <li><a href="#"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
+                <li><a href="dashboard.html"><i class="nc-icon nc-chart-pie-35"></i>Dashboard</a></li>
                 <li>
                     <a href="#menu-cadastro" data-toggle="collapse" aria-expanded="false" aria-controls="menu-cadastro"
                         class="dropdown-toggle">
@@ -140,11 +140,11 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="nc-icon nc-notes"></i>Preventivo</a></li>
+                <li><a href="preventivo.html"><i class="nc-icon nc-notes"></i>Preventivo</a></li>
                 <li><a href="#"><i class="nc-icon nc-paper-2"></i>Contencioso</a></li>
                 <li><a href="#"><i class="nc-icon nc-money-coins"></i>Financeiro</a></li>
-                <li><a href="#"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
-                <li><a href="#menu-kanban"><i class="nc-icon nc-grid-45"></i>Kanban</a></li>
+                <li><a href="relatorios.html"><i class="nc-icon nc-chart-bar-32"></i>Relatórios</a></li>
+                <li><a href="kanban.html"><i class="nc-icon nc-grid-45"></i>Kanban</a></li>
                 <li>
                     <a href="#menu-upload" data-toggle="collapse" aria-expanded="false" aria-controls="menu-upload"
                         class="dropdown-toggle"><i class="nc-icon nc-cloud-upload-94"></i>Upload<b
@@ -152,7 +152,7 @@
                     <ul class="collapse list-unstyled" id="menu-upload">
                         <li>
                             <a href="#">Carga de duplicatas</a>
-                            <a href="#">Área de upload</a>
+                            <a href="upload.html">Área de upload</a>
                         </li>
                     </ul>
                 </li>
@@ -285,6 +285,14 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
+                                        <div class="row form-field">
+                                            <div class="col-xs-4">
+                                                Safra
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-xs-5">
                                         <div class="row form-field">
@@ -338,7 +346,7 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="row form-field">
+                                        <div class="form-field">
                                             <div class="col-xs-4">
                                                 Valor
                                             </div>
@@ -351,6 +359,22 @@
                                                     <span class="input-group-addon">Até</span>
                                                     <input type="text" class="form-control">
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <div class="col-xs-4">
+                                            </div>
+                                            <div class="col-xs-8 apply-filter-container">
+<div class="col-xs-6">
+    <button class="btn btn-primary btn-fill color-primary-button remove-border">Aplicar</button>
+</div>
+<div class="col-xs-6 no-padding">
+    <button class="btn btn-primary btn-fill color-primary-button remove-border">Remover</button>
+</div>
+                                                
+                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -381,190 +405,199 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active checkbox-grid" id="report-1">
 
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Nº ACADV</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Analista</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Data solicitação</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>RTV</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Trading</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Commodity</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Área plantio</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Descrição das pendências</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Rating</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Traffic-light</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Moeda</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Atualização</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Empresa</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Regional</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Última observação</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Data cobrança</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>BU</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Formalização</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Responsável pela pendência</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Unidade</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Empresa</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Cartório de registro</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Moeda</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Safra</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Unidade</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Quantidade</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Cliente</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Município/UF</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Solicitante</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Valor</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Status formalização</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Commodity</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Nº ACADV</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Status comercial</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Vencimento</label>
+                                    </div>
                                 </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Data pagamento</label>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Comprometimento</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Nº do documento</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Status formalização</label>
+                                    </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Data cobrança</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Pendências</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Terceiro</label>
+                                    </div>
+                                    <div class="col-xs-3 selectAll">
+                                        <input type="checkbox" id="selectAll">
+                                        <label class="selectAll"><b>Selecionar tudo</b></label>    
+                                    </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Data pagamento</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Quantidade</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="checkbox">
+                                        <label>Tipo de serviço</label>
+                                    </div>
+                                    <div class="col-xs-3">
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Traffic-light</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Unidade</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Status comercial</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Última observação</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Cliente</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Área plantio</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Data solicitação</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Atualização</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Rating</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Comprometimento</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Solicitante</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Responsável pela pendência</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Tipo de serviço</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Unidade</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>BU</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Pendências</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Nº do documento</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Regional</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Analista</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Descrição das pendências</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Terceiro</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Município/UF</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>RTV</label>
-                                </div>
-                                </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Trading</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Cartório de registro</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Vencimento</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" id="selectAll" />
-                                    <label><b>Selecionar tudo</b></label>    
-                                </div>
-                                </div>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Safra</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Valor</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <input type="checkbox" />
-                                    <label>Formalização</label>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button class="btn btn-primary color-primary-button remove-border">
-                                        <i style="font-size: 12px" class="glyphicon glyphicon-star"></i>
-                                    </button>
-                                    <button class="btn btn-primary color-primary-button remove-border">Emitir Relatório</button>
-                                </div>
-                                </div>
+                            <div class="text-right">
+                                <button class="btn btn-primary color-primary-button remove-border">
+                                    <i style="font-size: 12px" class="glyphicon glyphicon-star"></i>
+                                </button>
+                                <button class="btn btn-primary btn-large color-primary-button remove-border">Emitir Relatório</button>
+                                <button class="btn btn-primary btn-large color-primary-button remove-border">Emitir SLA</button>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="report-4">
                                 <div class="row">
                                     <div class="col-xs-6">
                                         <h4>Favoritados</h4>
                                         <ol>
+                                            <li><a href="#" title="Este relatório contém células mescladas">Relatório Geral -Completo</a>
+                                                
+                                            </li>
+                                            <li><a href="#">Relatório Geral - Destaque pendências</a>
+                                                
+                                            </li>
                                             <li><a href="#">Empresa; Traffic-light; Cliente; Nº do documento</a>
                                                 <a href="#"><i class="nc-icon nc-bin"></i></a>
                                             </li>
